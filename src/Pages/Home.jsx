@@ -42,7 +42,7 @@ export default function Home() {
   }, [clickedEmojiIds]);
 
   return (
-    <div className="p-10 bg-amber-700 h-screen space-y-2">
+    <div className="p-10 bg-amber-700 flex flex-col justify-center items-center h-screen space-y-2">
       <ScoreBoard score={score} bestScore={bestScore} />
       <div className="grid grid-cols-3 w-94  mx-auto my-0 h-86  justify-center items-center">
         {shuffledEmojis.map((item) => (
@@ -50,6 +50,7 @@ export default function Home() {
         ))}
       </div>
       <h1 className="text-2xl md:text-3xl font-bold text-center text-white my-4">Do not Click the Same Emoji Twice!</h1>
+      <p className="text-sm text-white text-center fixed bottom-1">Developed By Alex</p>
     </div>
   );
 }
